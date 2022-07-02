@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">To-Do</string>
+    <string name="add_button">Add Button</string>
+    <string name="search_task">Search Tasks</string>
+    <string name="sort_task">Sort Tasks</string>
+    <string name="delete_all_task">Delete All Tasks</string>
+    <string name="delete_all_text">Delete All</string>
+    <string name="close_string">Close Search</string>
+    <string name="task">Tasks</string>
+    <string name="search_placeholder">Search</string>
+    <string name="no_task">No Task Found</string>
+    <string name="empty_container_string">Nothing TuDu! Get back and relax</string>
+    <string name="back_nav">Back Button</string>
+    <string name="add_task">Add Task</string>
+    <string name="new_task_title">New Task</string>
+    <string name="alert_dialog_delete_all">Delete All?</string>
+    <string name="alert_dialog_delete_all_msg">Are you sure to delete all your tasks? (There is no going back)</string>
+    <string name="delete_task">Delete task</string>
+</resources>
