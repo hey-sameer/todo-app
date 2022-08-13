@@ -7,6 +7,7 @@ object CONSTANTS {
     const val LIST_SCREEN_ROUTE = "list/{action}"
     const val TASK_SCREEN_ROUTE = "task/{taskID}"
     const val SPLASH_SCREEN_ROUTE = "splash/"
+    const val LOGIN_SCREEN_ROUTE = "login/"
 
 
     const val LIST_SCREEN_ARG_KEY = "action"

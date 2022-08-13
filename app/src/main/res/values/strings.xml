@@ -16,4 +16,6 @@
     <string name="alert_dialog_delete_all">Delete All?</string>
     <string name="alert_dialog_delete_all_msg">Are you sure to delete all your tasks? (There is no going back)</string>
     <string name="delete_task">Delete task</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="web_client_id">915575882289-05qlv4hkik53vkov0m2nrcsrk72roevb.apps.googleusercontent.com</string>
 </resources>

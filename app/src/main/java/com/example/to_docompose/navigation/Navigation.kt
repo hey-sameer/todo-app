@@ -10,14 +10,17 @@ import androidx.navigation.navArgument
 import com.example.to_docompose.data.models.ToDoTask
 import com.example.to_docompose.ui.screens.list.ListScreen
 import com.example.to_docompose.ui.screens.list.TAG
+import com.example.to_docompose.ui.screens.login.LoginScreen
 import com.example.to_docompose.ui.screens.splash.SplashScreen
 import com.example.to_docompose.ui.screens.task.TaskScreen
 import com.example.to_docompose.ui.util.CONSTANTS.LIST_SCREEN_ARG_KEY
 import com.example.to_docompose.ui.util.CONSTANTS.LIST_SCREEN_ROUTE
+import com.example.to_docompose.ui.util.CONSTANTS.LOGIN_SCREEN_ROUTE
 import com.example.to_docompose.ui.util.CONSTANTS.SPLASH_SCREEN_ROUTE
 import com.example.to_docompose.ui.util.CONSTANTS.TASK_SCREEN_ARG_KEY
 import com.example.to_docompose.ui.util.CONSTANTS.TASK_SCREEN_ROUTE
 import com.example.to_docompose.ui.util.toAction
+import com.example.to_docompose.ui.viewmodels.AuthViewModel
 import com.example.to_docompose.ui.viewmodels.SharedViewModel
 
 var _taskID: Int? = null
@@ -27,7 +30,8 @@ var _selectedTask: ToDoTask? = null
 @Composable
 fun Navigation(
     navController: NavHostController,
-    sharedViewModel: SharedViewModel
+    sharedViewModel: SharedViewModel,
+    authViewModel: AuthViewModel,
 ) {
     //didn't pass controller to remember (...)
     val screen = remember {
@@ -38,6 +42,10 @@ fun Navigation(
         //splash composable
         composable(route = SPLASH_SCREEN_ROUTE){
             SplashScreen(screen.splash)
+        }
+
+        composable(route = LOGIN_SCREEN_ROUTE){
+            LoginScreen(authViewModel, screen.login)
         }
 
         //to List Screen

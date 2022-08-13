@@ -4,5 +4,5 @@ sealed class RequestState<out T>{
     object Idle: RequestState<Nothing>()
     object Loading: RequestState<Nothing>()
     data class Success<T>(val data: T): RequestState<T>()
-    class Error(e: Throwable): RequestState<Nothing>()
+    class Error(val e: Throwable): RequestState<Nothing>()
 }

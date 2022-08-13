@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "915575882289",
+    "project_id": "to-do-compose-411ae",
+    "storage_bucket": "to-do-compose-411ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915575882289:android:293f2acefccedb31754b10",
+        "android_client_info": {
+          "package_name": "com.example.to_docompose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915575882289-3ck4g9trjqg7521apuj54011ro00qt31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.to_docompose",
+            "certificate_hash": "07cd3c903704a2ba2035b67652b3e9cf5dc0e33c"
+          }
+        },
+        {
+          "client_id": "915575882289-05qlv4hkik53vkov0m2nrcsrk72roevb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOk-p7nBZbVchnxNiiGpJaqCiAtw6HPzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915575882289-05qlv4hkik53vkov0m2nrcsrk72roevb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

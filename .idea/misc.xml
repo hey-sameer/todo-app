@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidAppProjects/ToDoCompose/app/src/main/res/drawable/ic_google_logo.xml" value="0.1" />
         <entry key="..\:/AndroidAppProjects/ToDoCompose/app/src/main/res/drawable/ic_sad_face.xml" value="0.115" />
         <entry key="..\:/AndroidAppProjects/ToDoCompose/app/src/main/res/drawable/todo_logo_light.xml" value="0.115" />
       </map>

@@ -4,7 +4,6 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
@@ -23,12 +22,12 @@ import kotlinx.coroutines.delay
 
 @Composable
 @Preview
-fun SplashScreen(toListScreen: ()->Unit = {}){
+fun SplashScreen(toNextScreen: ()->Unit = {}){
     var animationStarted by remember{ mutableStateOf(false)}
     LaunchedEffect(key1 = true){
         animationStarted = true
         delay(2000)
-        toListScreen()
+        toNextScreen()
     }
 
     val alpha by animateFloatAsState(targetValue = if(animationStarted) 1f else 0f, animationSpec = tween(1000))
@@ -41,7 +40,7 @@ fun SplashScreen(toListScreen: ()->Unit = {}){
     ){
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Icon(
-                painter = painterResource(id = R.drawable.todo_logo_light),
+                painter = painterResource(id = R.drawable.logopng),
                 contentDescription = "",
                 modifier = Modifier
                     .size(120.dp)
@@ -61,10 +60,10 @@ fun SplashScreen(toListScreen: ()->Unit = {}){
     }
 }
 
-@Composable
-fun getPainterRes(): Int {
-    return  if(isSystemInDarkTheme())
-        R.drawable.todo_png
-    else R.drawable.todo_png
-}
+//@Composable
+//fun getPainterRes(): Int {
+//    return  if(isSystemInDarkTheme())
+//        R.drawable.todo_png
+//    else R.drawable.todo_png
+//}
 
