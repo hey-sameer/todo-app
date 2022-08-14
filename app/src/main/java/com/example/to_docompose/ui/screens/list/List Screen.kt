@@ -1,26 +1,29 @@
 package com.example.to_docompose.ui.screens.list
 
 import android.annotation.SuppressLint
-import android.util.Log
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.to_docompose.R
 import com.example.to_docompose.data.models.Priority
+import com.example.to_docompose.ui.theme.DarkColorBackground
+import com.example.to_docompose.ui.theme.LightColorBackground
 import com.example.to_docompose.ui.util.Action
 import com.example.to_docompose.ui.util.RequestState
 import com.example.to_docompose.ui.viewmodels.SharedViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ListScreen(
-    onTaskClick: (Int) -> Unit = {},
+    onTaskClick: (Int) -> Unit,
     sharedViewModel: SharedViewModel
 ) {
     //called everytime list screen opens to have updated task
@@ -53,9 +56,19 @@ fun ListScreen(
     Scaffold(
         scaffoldState = scaffoldState,
         content = @Composable {
-            ListContent(allTasks = allTask, toTaskScreen = onTaskClick, searchedTasks = searchedTask, searchAppBarState = listAppBarState) {
-                sharedViewModel.updateFieldsWithCurrentSelectedTask(it)
-                sharedViewModel.action.value = Action.DELETE
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = if (isSystemInDarkTheme()) MaterialTheme.colors.surface else LightColorBackground
+            ) {
+                ListContent(
+                    allTasks = allTask,
+                    toTaskScreen = onTaskClick,
+                    searchedTasks = searchedTask,
+                    searchAppBarState = listAppBarState
+                ) {
+                    sharedViewModel.updateFieldsWithCurrentSelectedTask(it)
+                    sharedViewModel.action.value = Action.DELETE
+                }
             }
         },
         floatingActionButton = { ListScreenFAB(

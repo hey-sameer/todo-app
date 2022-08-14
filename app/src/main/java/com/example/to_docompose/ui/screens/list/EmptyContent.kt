@@ -1,5 +1,6 @@
 package com.example.to_docompose.ui.screens.list
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -12,11 +13,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.to_docompose.R
+import com.example.to_docompose.ui.theme.LightColorBackground
 
 @Composable
 @Preview
 fun EmptyContent() {
-    Surface(modifier = Modifier.fillMaxSize()) {
+    Surface(modifier = Modifier.fillMaxSize(), color = if(isSystemInDarkTheme()) LocalContentColor.current else LightColorBackground) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
@@ -26,7 +28,9 @@ fun EmptyContent() {
             Icon(
                 painter = painterResource(id = R.drawable.empty_note),
                 contentDescription = "Sad Face",
-                modifier = Modifier.alpha(ContentAlpha.medium).size(128.dp)
+                modifier = Modifier
+                    .alpha(ContentAlpha.medium)
+                    .size(128.dp)
             )
             Text(
                 text = stringResource(R.string.empty_container_string),

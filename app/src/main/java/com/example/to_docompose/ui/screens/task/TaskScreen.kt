@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
@@ -20,6 +21,9 @@ fun TaskScreen(task: ToDoTask?, toListScreen: (Action) -> Unit, sharedViewModel:
     val desc by sharedViewModel.description
     val priority by sharedViewModel.priority
     val context = LocalContext.current
+    BackHandler(enabled = true) {
+        toListScreen(Action.NO_ACTION)
+    }
     Scaffold(topBar = {
         TaskAppBar(
             task = task,
