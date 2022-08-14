@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.runtime.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,7 +42,8 @@ fun NewTaskAppBar(toListScreen: (Action) -> Unit) {
                     contentDescription = stringResource(R.string.add_task)
                 )
             }
-        }
+        },
+        backgroundColor = Color(0xFF3700B3)
     )
 }
 

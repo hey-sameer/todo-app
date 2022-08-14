@@ -21,7 +21,7 @@ class MainActivity @Inject constructor() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            
+//            window.setBackgroundDrawableResource(R.drawable.ic_launcher_foreground)
             ToDoComposeTheme {
                 navController = rememberNavController()
                 Navigation(navController = navController, sharedViewModel, authViewModel)

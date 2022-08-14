@@ -1,6 +1,5 @@
 package com.example.to_docompose.navigation
 
-import android.util.Log
 import androidx.compose.runtime.*
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -9,7 +8,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.to_docompose.data.models.ToDoTask
 import com.example.to_docompose.ui.screens.list.ListScreen
-import com.example.to_docompose.ui.screens.list.TAG
 import com.example.to_docompose.ui.screens.login.LoginScreen
 import com.example.to_docompose.ui.screens.splash.SplashScreen
 import com.example.to_docompose.ui.screens.task.TaskScreen
