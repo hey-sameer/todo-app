@@ -61,6 +61,7 @@ fun EditTaskAppBar(toListScreen: (Action) -> Unit, task: ToDoTask) {
         actions = {
             EditAppBarActions(toListScreen = toListScreen, task = task)
         },
+        backgroundColor = Color(0xFF3700B3)
     )
 }
 

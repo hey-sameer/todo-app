@@ -75,11 +75,12 @@ fun ListScreen(
 @Preview
 fun ListScreenFAB(onFabClicked: () -> Unit = {}){
     FloatingActionButton(onClick = {onFabClicked()},
+        backgroundColor = Color(0xFF3700B3)
         ) {
         Icon(
             imageVector = Icons.Outlined.Add,
             contentDescription = stringResource(id = R.string.add_button),
-            tint = Color.White
+            tint = Color.White,
         )
     }
 }
